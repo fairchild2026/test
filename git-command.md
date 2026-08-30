@@ -4,7 +4,8 @@ date: 2026.5.30
 ---
 
 [Git 官网](https://git-scm.com/)  
-[Git 教程](https://www.runoob.com/git/git-tutorial.html)  
+[菜鸟教程](https://www.runoob.com/git/git-tutorial.html)  
+[廖雪峰网站](https://liaoxuefeng.com/books/git/introduction/index.html)  
 
 Git 是目前最主流的 **分布式版本控制系统**，由 Linus Torvalds 于 2005 年创建。它的核心优势包括：  
 
