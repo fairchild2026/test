@@ -335,7 +335,7 @@ git tag
 git tag v1.0.0
 
 # 创建附注标签（推荐，含元数据）
-# --annotate	创建一个附注标签，会存储完整的元数据（标签名、打标签者、邮箱、时间、标签信息）
+# --annotate 创建一个附注标签，会存储完整的元数据（标签名、打标签者、邮箱、时间、标签信息）
 git tag -a v1.0.0 -m "Release version 1.0.0"
 
 # 为历史提交打标签
@@ -361,11 +361,11 @@ git push origin --delete v1.0.0
 ### 7.1 Git Flow 工作流  
 
 ```
-main        ←── 生产分支，只接受 release 和 hotfix 合并
-develop     ←── 开发主线
-feature/*   ←── 新功能，从 develop 分出，合回 develop
-release/*   ←── 发布准备，从 develop 分出，合回 main 和 develop
-hotfix/*    ←── 紧急修复，从 main 分出，合回 main 和 develop
+main        <—— 生产分支，只接受 release 和 hotfix 合并
+develop     <—— 开发主线
+feature/*   <—— 新功能，从 develop 分出，合回 develop
+release/*   <—— 发布准备，从 develop 分出，合回 main 和 develop
+hotfix/*    <—— 紧急修复，从 main 分出，合回 main 和 develop
 ```
 
 ### 7.2 GitHub Flow（简化版）  
@@ -391,13 +391,13 @@ git pull origin main          # 拉取最新
 
 # 2. 更新 feature/login（确保它包含 main 最新代码）
 git switch feature/login
-git merge main                # ← 【合并操作 1】：将 main 的更新合并到 feature/login
+git merge main                # ← 【合并操作 1】将 main 的更新合并到 feature/login
 # 或 git rebase main          # ← rebase 是另一种合并方式
 # 解决冲突（如果有）
 
 # 3. 切回 main，合并 feature/login
 git switch main
-git merge --no-ff feature/login -m "Merge feature/login into main"  # ← 【合并操作 2】：将 feature/login 合并回 main
+git merge --no-ff feature/login -m "Merge feature/login into main"  # ← 【合并操作 2】将 feature/login 合并回 main
 
 # 4. 推送到远程
 git push origin main          # 推送合并后的 main 到远程
@@ -431,7 +431,7 @@ type 类型：
 
 ## 8 常见问题  
 
-### Q1：如何查找包含特定内容的提交？
+### Q1：如何查找包含特定内容的提交？  
 
 ```bash
 # 搜索提交信息
@@ -457,7 +457,7 @@ git stash pop
 git stash apply stash@{2}
 ```
 
-### Q3：如何找回误删的分支或提交？
+### Q3：如何找回误删的分支或提交？  
 
 ```bash
 # 查看所有操作记录（包括已删除）
@@ -467,7 +467,7 @@ git reflog
 git checkout -b recovered-branch HEAD@{3}
 ```
 
-### Q4：如何修改多次历史提交的作者信息？
+### Q4：如何修改多次历史提交的作者信息？  
 
 ```bash
 git rebase -i HEAD~5
@@ -498,4 +498,3 @@ git tag -a v1.0 -m "msg"    # 创建标签
 git diff                    # 查看差异
 git revert <hash>           # 安全撤销提交
 ```
-
